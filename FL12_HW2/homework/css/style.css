@@ -9,6 +9,7 @@
 .tm-banner {
 	background-image: linear-gradient(to right, lightskyblue, burlywood);
 }
+
 .tm-banner-inner {
 	background-color: #fff;
 }
@@ -33,6 +34,7 @@
 	display: flex;
 	align-items: center;
 }
+
 .flex-2-col .tm-section-title {
 	text-align: center;
 }
@@ -41,4 +43,32 @@
 #about .box-bg:hover {
 	background-color: lightgrey;
 	color: lightskyblue;
+}
+
+/* Task 8. Add styling to the “We are…” section */
+.heading .padding-medium h2 {
+	text-align: center;
+	color: lightskyblue;
+}
+
+.heading .padding-medium ol {
+	list-style-type: lower-alpha;
+}
+
+.heading .padding-medium ol li:hover::before {
+	content: ">";
+	font-weight: bold;
+}
+
+.heading .padding-medium .text {
+	position: relative;
+}
+
+.heading .padding-medium .text:after {
+  content: "New";
+  color: red;
+  font-size: 10px;
+  vertical-align: top;
+  font-variant: small-caps;
+  font-weight: bold;
 }
