@@ -112,3 +112,42 @@
 	text-indent:25px;
 }
 
+/* Task 12. Add style for form */
+#contact .tm-section-title {
+	text-align: left;
+}
+
+.contact-form .form-control {
+	outline: none;
+	border:none;
+	border-bottom: 1px solid lightskyblue;
+}
+
+.contact-form #contact_message {
+	border: 1px solid lightskyblue;
+  background-image: url("../img/email-icon.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: bottom 5px right 0px;
+	background-origin: content-box;
+}
+
+.contact-form input:focus {
+	background-color: lightskyblue;
+}
+
+.contact-form {
+	text-align: right;
+}
+
+.contact-form .btn {
+	background-color: #ffff;
+	color: lightskyblue;
+	border: 1px solid lightskyblue;
+	padding: 15px 27px;
+}
+
+.contact-form .btn:hover {
+	background-color: lightskyblue;
+	color: #ffff;
+}
