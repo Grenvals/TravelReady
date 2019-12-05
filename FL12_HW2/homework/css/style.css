@@ -1,5 +1,6 @@
-/*
 
-write your code here
-
-*/
+/* Task 2. Add gradient for the banner */
+.tm-nav-item-link:hover {
+	color: #fff;
+	background-color: lightskyblue;
+}
