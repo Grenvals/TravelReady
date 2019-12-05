@@ -36,3 +36,9 @@
 .flex-2-col .tm-section-title {
 	text-align: center;
 }
+
+/* Task 7. Add a hover effect for gallery section */
+#about .box-bg:hover {
+	background-color: lightgrey;
+	color: lightskyblue;
+}
