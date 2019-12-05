@@ -1,6 +1,14 @@
 
-/* Task 2. Add gradient for the banner */
+/* Task 2. Add a hover effect for the navigation items */
 .tm-nav-item-link:hover {
 	color: #fff;
 	background-color: lightskyblue;
+}
+
+/* Task 3. Add gradient for the banner */
+.tm-banner {
+	background-image: linear-gradient(to right, lightskyblue, burlywood);
+}
+.tm-banner-inner {
+	background-color: #fff;
 }
