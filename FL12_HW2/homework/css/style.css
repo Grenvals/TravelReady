@@ -88,7 +88,7 @@
 	letter-spacing: 5px;
 } 
 
-/* Task 10. Style the following blocks  */
+/* Task 10. Style the following blocks */
 .blocks .boxes .box-work {
 	padding: 10px;
 }
@@ -105,3 +105,10 @@
 .blocks .box-work p:first-letter {
 	font-weight: 600;
 }
+
+/* Task 11. Style for all paragraphs tm-section-description */
+.tm-section-description {
+	line-height: 30px;
+	text-indent:25px;
+}
+
