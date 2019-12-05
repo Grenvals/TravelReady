@@ -12,3 +12,8 @@
 .tm-banner-inner {
 	background-color: #fff;
 }
+
+/* Task 4. Add shadow for text in bunner */
+.tm-banner-text {
+	text-shadow: 5px 4px 4px #333;
+}
