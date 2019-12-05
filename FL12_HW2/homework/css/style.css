@@ -13,7 +13,17 @@
 	background-color: #fff;
 }
 
-/* Task 4. Add shadow for text in bunner */
+/* Tasks 4,5. Add shadow for text in bunner Task & animation to the banners text */
 .tm-banner-text {
 	text-shadow: 5px 4px 4px #333;
+	animation: 3.9s fadeInLeft;
+}
+
+@keyframes fadeInLeft {
+	0% {
+			transform: translateX(200px);
+	}
+	100% {
+			transform: translateX(0);
+	}
 }
