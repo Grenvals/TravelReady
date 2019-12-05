@@ -72,3 +72,16 @@
   font-variant: small-caps;
   font-weight: bold;
 }
+
+/* Task 9. Add style for last paragraph of section ‘Our work’ */
+.blocks .tm-section-title {
+	text-align: left;
+}
+.blocks .tm-team-description-container p {
+	text-indent: 25px;
+}
+.blocks .tm-team-description-container p:last-child {
+	font-style: italic;
+	word-spacing: 10px;
+	letter-spacing: 5px;
+}  
