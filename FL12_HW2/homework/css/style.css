@@ -27,3 +27,12 @@
 			transform: translateX(0);
 	}
 }
+
+/* Task 6. Add styles for “What we do” section */
+.flex-2-col {
+	display: flex;
+	align-items: center;
+}
+.flex-2-col .tm-section-title {
+	text-align: center;
+}
