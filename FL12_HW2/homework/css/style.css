@@ -77,11 +77,31 @@
 .blocks .tm-section-title {
 	text-align: left;
 }
+
 .blocks .tm-team-description-container p {
 	text-indent: 25px;
 }
+
 .blocks .tm-team-description-container p:last-child {
 	font-style: italic;
 	word-spacing: 10px;
 	letter-spacing: 5px;
-}  
+} 
+
+/* Task 10. Style the following blocks  */
+.blocks .boxes .box-work {
+	padding: 10px;
+}
+.blocks .boxes .box-work:nth-child(2n+1) {
+	background-color: lightskyblue; 
+	color: #fff;
+}
+.blocks .box-work h2 {
+	font-weight: 400;
+}
+.blocks .box-work p {
+	font-style: italic;
+}
+.blocks .box-work p:first-letter {
+	font-weight: 600;
+}
