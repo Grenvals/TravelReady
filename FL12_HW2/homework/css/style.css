@@ -243,5 +243,7 @@ section::before {
 	h2 {
 			text-transform: uppercase;
 	}
-
+	@page {
+    margin: 1cm;
+	}
 }
