@@ -1,1 +1,235 @@
-// Write your styles here
+// Maps
+$add-color-style: (
+        defaultLink: #A6B9BB,
+        bodyBackground: $bg-color-white,
+        button: #F5FBFA,
+				buttonBackground: $color-green,
+				headerColorText: $color-dark,
+        headerLink: #F5FBFA,
+				sectionTextColor: $color-dark,
+				footer: #C0C3CE,
+				footerBackground: $color-black,
+				sectionCard: #FFF8E2,
+        CardHeaderStyle: #FFF8E2,
+        blockCardTextMap: #A6B9BB,
+				BannerHeaderColorDark: $color-dark,
+        underlineBackground: $color-blue,
+				headerLogo: $color-dark,
+        sectionCardBackground: $color-black,
+        headerHeader: $color-dark,
+        BannerTextColor: #A6B9BB,
+        BannerBackgroundColorForm: $color-green,
+        sectionBannerBackgroundTo: $color-dark-blue,
+);
+
+// Mixins 
+@mixin underline($content, $indent) {
+  &::after {
+		content: $content;
+		position: absolute;
+    left: $indent;
+    color: #373c4a;
+    background-color: map-get($add-color-style, underlineBackground);
+  }
+}
+
+
+@mixin link($color: map-get($add-color-style, defaultLink)) {
+  a {
+    color: $color;
+  }
+}
+
+@mixin flex($direction: row, $justify: normal, $align: normal) {
+	display: flex;
+	flex-direction: $direction;
+  justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin button {
+  button {
+		border-radius: 2px;
+		color: map-get($add-color-style, button);
+		border: none;
+    height: 34px;
+    background-color: map-get($add-color-style, buttonBackground);
+    width: 94px;
+  }
+}
+
+@mixin logo($color) {
+  p {
+    @include flex(column, space-between, center);
+    margin: 2px 0 0 11px;
+		font-weight: bold;
+		height: 30px;
+    font-family: $font;
+    font-size: 1.2em;
+    color: $color;
+  }
+  span {
+		font-family: $font;
+    font-size: 0.4em;
+    margin-top: 2px;
+  }
+}
+
+// Style
+body {
+	margin: 0;
+  background: map-get($add-color-style, bodyBackground);
+}
+
+// header
+.header {
+  @include flex;
+  min-height: 499px;
+  background: $header-source no-repeat center;
+  background-size: cover;
+  border-radius: 0 0 449px/199px 0;
+
+  &-wrap {
+    @include flex(column, center, flex-start);
+    padding: $padding-top 19px 19px $padding-left;
+    width: $width;
+    position: relative;
+
+    .landing-logo {
+			@include flex;
+			@include logo(map-get($add-color-style, headerLogo));
+			position: absolute;
+			left: $padding-left;
+      top: $padding-top;
+		}
+		
+    .header_heading {
+      font-size: 3em;
+      font-weight: bold;
+      color: map-get($add-color-style, headerHeader);
+      margin: 0;
+			line-height: 1em;
+			width: ($width / 1.5);
+      font-family: $font;
+
+      @include underline("awesome", $padding-left);
+    }
+
+    .header_text {
+			margin: 29px 0;
+			color: map-get($add-color-style, headerColorText);
+      width: ($width);
+      white-space: pre-line;
+      font-size: 0.8em;
+      font-family: $font;
+    }
+    div {
+      &:last-child {
+				@include flex($justify: space-between, $align: center);
+				@include link(map-get($add-color-style, headerLink));
+        width: ($width / 1.7);
+        @include button;
+      }
+    }
+  }
+}
+
+// section
+.section {
+  @include flex($direction: column, $align: center);
+  .section_text {
+		font-size: 2em;
+		color: map-get($add-color-style, sectionTextColor);
+    position: relative;
+    font-family: $font;
+    font-weight: bold;
+    @include underline("adventure", 170px);
+  }
+
+  .section_card_wrap {
+    @include flex(column, center, center);
+    .section_card {
+      @include flex($justify: space-between);
+			width: 66%;
+			margin-bottom: 29px;
+      border-radius: 6px;
+      color: map-get($add-color-style, sectionCard);
+      background-color: map-get($add-color-style, sectionCardBackground);
+      padding: 14px;
+
+      .section_card_img {
+				min-width: 40%;
+				border-radius: 5px;
+				float: left;
+				height: auto;
+      }
+
+      .section_card_right_container {
+        @include flex(column, center, center);
+				float: right;
+        margin: 16px 69px;
+        font-family: $font;
+        max-width: 60%;
+        .section_card_heading {
+          color: map-get($add-color-style, CardHeaderStyle);
+        }
+        .section_card_text {
+          color: map-get($add-color-style, blockCardTextMap);
+        }
+        @include link;
+      }
+    }
+  }
+
+// Section banner
+  .section_banner {
+    @include flex($justify: space-around, $align: center);
+    background: linear-gradient(to right, map-get($add-color-style, BannerBackgroundColorForm),
+    map-get($add-color-style, sectionBannerBackgroundTo));
+    width: 75%;
+		margin-top: 59px;
+		height: $banner-height;
+    margin-bottom: -59px;
+    border-radius: 6px;
+    .section_banner_text_wrap {
+      @include flex(column, space-between, flex-start);
+			.section_banner_text {
+				font-family: $font;
+        margin-top: 14px;
+        color: map-get($add-color-style, BannerTextColor);
+      }
+      .section_banner_heading {
+        font-size: 1.8em;
+				font-family: $font;
+				margin: 0;
+        position: relative;
+        font-weight: bolder;
+        color: map-get($add-color-style, BannerHeaderColorDark);
+        @include underline("start", 117px);
+      }
+    }
+    @include button;
+  }
+}
+
+// Footer
+.footer {
+  .footer-wrap {
+		@include flex($justify: space-around, $align: center);
+		height: 199px;
+    padding-top: ($banner-height / 2);
+    background-color: map-get($add-color-style, footerBackground);
+    .landing-logo {
+			@include logo(map-get($add-color-style, footer));
+      @include flex;
+    }
+    .footer_text {
+			color: map-get($add-color-style, footer);
+      width: 318px;
+    }
+    .footer-cr {
+      @extend .footer_text;
+      width: 249px;
+    }
+  }
+}
