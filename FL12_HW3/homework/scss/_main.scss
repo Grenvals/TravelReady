@@ -104,6 +104,7 @@ body {
 		}
 		
     .header_heading {
+			@include underline("awesome", $padding-left);
       font-size: 3em;
       font-weight: bold;
       color: map-get($add-color-style, headerHeader);
@@ -111,8 +112,6 @@ body {
 			line-height: 1em;
 			width: ($width / 1.5);
       font-family: $font;
-
-      @include underline("awesome", $padding-left);
     }
 
     .header_text {
@@ -156,7 +155,6 @@ body {
       color: map-get($add-color-style, sectionCard);
       background-color: map-get($add-color-style, sectionCardBackground);
       padding: 14px;
-
       .section_card_img {
 				min-width: 40%;
 				border-radius: 5px;
