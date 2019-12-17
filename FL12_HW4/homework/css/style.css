@@ -4,12 +4,15 @@
 	margin: 0px;
 	border: 0px;
 }
+
 *,*:before,*:after	{
 	box-sizing: border-box;
 }
+
 nav,footer,header,section	{
 	display: block;
 }
+
 html,body	{
 	height: 100%;
 	margin: 0;
@@ -17,25 +20,31 @@ html,body	{
 	width: 100%;
 	color: #000000;
 }
+
 body	{
 	font-size: 100%;
 	line-height: 1; 
 	font-size: 14px; 
 	font-family: serif;
 }
+
 button	{
 	cursor: pointer;
 }
+
 a:hover{
 	text-decoration: none;
 }
+
 ul li{
 	list-style: none;
 }
+
 img{
 	vertical-align: top;
 	max-width: 100%;
 }
+
 h1,h2,h3,h4,h5,h6{
 	font-weight: inherit;
 	font-size: inherit;
@@ -44,6 +53,7 @@ h1,h2,h3,h4,h5,h6{
 input, button, a, label {
 	outline: none;
 }
+
 .container{
 	max-width: 1150px; 
 	margin: 0 auto;
@@ -51,6 +61,7 @@ input, button, a, label {
 	height: 100%;
 	padding: 0 15px;
 }
+
 .main .container, .footer .container {
 	max-width: 950px;
 }
@@ -61,6 +72,7 @@ input, button, a, label {
 	width: 100%;
 	padding-top: 85px;
 }
+
 .header-top {
 	position: fixed;
 	z-index: 100;
@@ -71,6 +83,7 @@ input, button, a, label {
 	background: #fff;
 	box-shadow: -1px -3px 20px -5px rgba(0,0,0,0.2);
 }
+
 .header-top__wraper {
 	display: flex;
 	justify-content: space-between;
@@ -78,6 +91,7 @@ input, button, a, label {
 	overflow: hidden;
 	height: 85px;
 }
+
 .header__logo	{
 	color: #777;
 	text-transform: uppercase;
@@ -85,15 +99,19 @@ input, button, a, label {
 	font-weight: 700;
 	letter-spacing: 4px;
 }
+
 .header-nav__list {
 	display: flex;
 }
+
 .header-nav__list-item {
 	padding: 0px 20px;
 }
+
 .header-nav__list-item:last-child {
 	padding: 0px 0px 0px 20px;
 }
+
 .header-nav__link {
 	font-size: 16px;
 	font-weight: 100;
@@ -102,15 +120,18 @@ input, button, a, label {
 	color: #777;
 	transition: color 0.2s;
 }
+
 .header-nav__link:hover {
 	color: #bfba55;
 }
+
 .header-content {
 	position: relative;
 	height: 100%;
 	background: url(../img/home-bg.jpg) top center no-repeat;
 	background-size: cover;
 }
+
 .header-content:before {
 	content: '';
   position: absolute;
@@ -121,6 +142,7 @@ input, button, a, label {
   background: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
+
 .header-content__wrap {
 	position: relative;
 	height: 100%;
@@ -129,9 +151,11 @@ input, button, a, label {
 	justify-content: center;
 	align-items: center;
 }
+
 .header-content__item {
 	text-align: center;
 }
+
 .header-content__title {
 	color: #ffffff;
 	font-size: 70px;
@@ -139,6 +163,7 @@ input, button, a, label {
 	font-weight: 500;
 	margin-bottom: 20px;
 }
+
 .header-content__subtitle {
 	display: block;
 	color: #bfba55;
@@ -146,6 +171,7 @@ input, button, a, label {
 	margin-bottom: 70px;
 	font-weight: 600;
 }
+
 .button {
 	display: inline-block;
 	background: #ffffff;
@@ -160,6 +186,7 @@ input, button, a, label {
 	transition: border 0.2s;
 	border: 1px solid #777;
 }
+
 .button:hover {
 	background: #bfba55;
 	color: #ffffff;
@@ -174,6 +201,7 @@ input, button, a, label {
 	font-weight: 600;
 	border: 0px solid #777;
 }
+
 .header .button:hover {
 	border: 0px solid #777;
 }
@@ -182,30 +210,36 @@ input, button, a, label {
 .main {
 	padding: 50px 0px;
 }
+
 .main-block {
 border-bottom: 1px solid #777;
 padding: 60px 0px;
 margin-bottom: 30px;
 }
+
 .main .main-block__last {
 	border-bottom: 0px solid transparent;
 	margin-bottom: 0px;
 }
+
 .main-block__img {
 	display: block;
 	margin-bottom: 40px;
 }
+
 .main-block__title {
 	font-size: 30px;
 	font-weight: 600;
 	margin-bottom: 15px;
 }
+
 .main-block__info {
 	font-size: 18px;
 	line-height: 1.5;
 	color: #777;
 	margin-bottom: 40px;
 }
+
 .main-block__author {
 	margin-bottom: 20px;
 }
@@ -215,6 +249,7 @@ margin-bottom: 30px;
 	align-items: center;
 	color: #777;
 }
+
 .author .author__photo {
 	height: 40px;
 	width: 40px;
@@ -222,14 +257,17 @@ margin-bottom: 30px;
 	overflow: hidden;
 	margin-right: 10px;
 }
+
 .author .author__name {
 	margin-right: 20px;
 	font-size: 16px;
 }
+
 .author .author__date {
 	margin-right: 20px;
 	font-size: 16px;
 }
+
 .author .author__comments {
 	font-size: 16px;
 }
@@ -240,27 +278,33 @@ margin-bottom: 30px;
 	padding: 100px 0px;
 	color: #fff;
 }
+
 .footer__wrap {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 6px;
 }
+
 .footer__item {
 	flex: 0 1 44%;
 }
+
 .footer__contacts {
 	flex: 0 1 40%;
 }
+
 .footer__title {
 	font-size: 28px;
 	font-weight: 600;
 	margin-bottom: 20px;
 }
+
 .footer__info  {
 	font-size: 17px;
 	line-height: 1.5;
 	color: #777;
 }
+
 .footer__link {
 	display: block;
 	text-decoration: none;
@@ -269,6 +313,7 @@ margin-bottom: 30px;
 	color: #777;
 	margin-bottom: 10px;
 }
+
 .footer__copyright {
 	font-size: 17px;
 	color: #777;
