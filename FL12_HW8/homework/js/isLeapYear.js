@@ -5,8 +5,10 @@ function isLeapYear(value) {
       
   if (result && !isNaN(ourDate)) {
     return `${outYear} is a leap year`
+
   } else if (!result && !isNaN(ourDate)) {
     return `${outYear} is not a leap year`
+    
   } else if (isNaN(ourDate)) {
     return "Invalid date"
   }

@@ -18,11 +18,13 @@ function countNumbers(numberString) {
     
     let output = {};
     for (let number of numberString) {
+
       if (!Object.prototype.hasOwnProperty.call(output, `'${number}'`)) {
         Object.defineProperty(output, `'${number}'`, {
           writable: true,
           value: 1
         });
+        
       } else {
         Object.defineProperty(output, `'${number}'`, {
           value: (output[`'${number}'`] + 1)
