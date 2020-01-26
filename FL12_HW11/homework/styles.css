@@ -1,0 +1,38 @@
+#root * {
+  list-style: none;
+  cursor: pointer;
+}
+
+.folder {
+  color: #EABC0A;
+}
+
+.file {
+  color: #BBBBBB;
+}
+
+.material-icons {
+  vertical-align: bottom;
+}
+
+p:hover {
+  background-color: #EFEFEF;
+}
+
+p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.empty {
+  font-style: italic;
+  pointer-events: none;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
