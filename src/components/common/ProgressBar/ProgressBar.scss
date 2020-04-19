@@ -1,0 +1,33 @@
+@import "../../../scss/main.scss";
+.progressBar {
+	height: 50px;
+	width: 50px;
+	position: relative;
+	z-index: 100;
+	@include flexbox();
+	align-items: center;
+	justify-content: center;
+	&__progress {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	&__text {
+		font-size: 18px;
+		font-weight: 900;
+		color: $textLight;
+	}
+	&__circleProgress {
+		stroke: red;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		fill: none;
+		&_complete {
+			stroke: $accent;
+		}
+	}
+	&__background {
+		fill: none;
+		stroke: #ddd;
+	}
+}

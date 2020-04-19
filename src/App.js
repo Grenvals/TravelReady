@@ -1,29 +1,19 @@
-import React from "react";
-import logo from "./assets/img/logo.svg";
+import React from 'react';
+import logo from './assets/img/logo.svg';
 // import style from "./App.module.scss";
-import "./App.scss";
-import "./scss/global.scss";
-import "./scss/main.scss";
+import './App.scss';
+import './scss/global.scss';
+import './scss/main.scss';
+import { Header } from './components/Header/Header';
+import { Board } from './components/Board/Board';
 
-function App() {
-  return (
+const App = () => (
+  <div className="wrapper">
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/Grenvals/Test/blob/master/README.md"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          How to start
-        </a>
-      </header>
+      <Header />
+      <Board />
     </div>
-  );
-}
+  </div>
+);
 
 export default App;

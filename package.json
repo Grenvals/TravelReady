@@ -50,9 +50,11 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-bundle-analyzer": "^3.8.0"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.8.2",
     "react-dom": "^16.8.2"
   }

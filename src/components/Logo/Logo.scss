@@ -1,0 +1,12 @@
+@import "../../scss/main.scss";
+.logo {
+	&__text {
+		font-size: 30px;
+		font-weight: 900;
+		color: $second;
+		span {
+			color: $textLight;
+			margin-left: 5px;
+		}
+	}
+}

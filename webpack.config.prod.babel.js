@@ -1,29 +1,29 @@
-import "@babel/polyfill";
+import '@babel/polyfill';
 
-import webpack from "webpack";
+import webpack from 'webpack';
 
-import autoprefixer from "autoprefixer";
-import path from "path";
-import OptimizeCssAssetsPlugin from "optimize-css-assets-webpack-plugin";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import ImageMinPlugin from "imagemin-webpack-plugin";
-import UglifyJSPlugin from "uglifyjs-webpack-plugin";
+import autoprefixer from 'autoprefixer';
+import path from 'path';
+import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ImageMinPlugin from 'imagemin-webpack-plugin';
+import UglifyJSPlugin from 'uglifyjs-webpack-plugin';
 
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: "production",
+  mode: 'production',
   devtool: false,
   entry: {
-    main: ["@babel/polyfill", "./src/index.js"],
+    main: ['@babel/polyfill', './src/index.js'],
   },
   output: {
-    filename: "[name].js",
-    path: path.join(__dirname, "dist"),
+    filename: '[name].js',
+    path: path.join(__dirname, 'dist'),
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    extensions: ['*', '.js', '.jsx'],
   },
   module: {
     rules: [
@@ -33,11 +33,11 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
-              presets: ["@babel/preset-env", "@babel/react"],
+              presets: ['@babel/preset-env', '@babel/react'],
               cacheDirectory: true,
-              plugins: ["react-hot-loader/babel"],
+              plugins: ['react-hot-loader/babel'],
             },
           },
         ],
@@ -47,11 +47,11 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
-            loader: "style-loader",
+            loader: 'style-loader',
             options: { sourceMap: true },
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               // modules: true, // CSS modules
               // localIdentName: "[name]__[local]__[hash:base64:5]", // CSS modules option, names for class
@@ -59,14 +59,14 @@ module.exports = {
             },
           },
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               sourceMap: true,
               plugins: [autoprefixer],
             },
           },
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: { sourceMap: true },
           },
         ],
@@ -76,10 +76,10 @@ module.exports = {
         test: /\.(ttf|otf|eot|woff|woff2)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              outputPath: "fonts",
-              name: "[name].[ext]",
+              outputPath: 'fonts',
+              name: '[name].[ext]',
             },
           },
         ],
@@ -89,28 +89,28 @@ module.exports = {
         test: /\.(png|gif|ico|svg|jpe?g)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              outputPath: "images",
-              name: "[name]-[sha1:hash:7].[ext]",
+              outputPath: 'images',
+              name: '[name]-[sha1:hash:7].[ext]',
             },
           },
-          "img-loader",
+          'img-loader',
         ],
       },
     ],
   },
   plugins: [
     new webpack.SourceMapDevToolPlugin({
-      filename: "[name].js.map",
-      exclude: ["bundle.js"],
+      filename: '[name].js.map',
+      exclude: ['bundle.js'],
     }),
-    new CleanWebpackPlugin({
-      cleanAfterEveryBuildPatterns: ["dist"],
-    }),
+    // new CleanWebpackPlugin({
+    //   cleanAfterEveryBuildPatterns: ['dist'],
+    // }),
     new HtmlWebpackPlugin({
-      filename: "./index.html",
-      template: "./public/index.html",
+      filename: './index.html',
+      template: './public/index.html',
     }),
     new BundleAnalyzerPlugin({}),
   ],

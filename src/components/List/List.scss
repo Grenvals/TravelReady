@@ -1,0 +1,15 @@
+@import "../../scss/main.scss";
+.list {
+	max-width: 400px;
+	&__wrap {
+		@include flexbox();
+		flex-direction: column;
+		background-color: $second;
+		box-shadow: $shadow;
+		border-radius: 15px;
+		min-height: 400px;
+	}
+	&__tasks {
+		flex: 1;
+	}
+}

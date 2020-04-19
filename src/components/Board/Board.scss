@@ -1,0 +1,20 @@
+@import "../../scss/main.scss";
+.board {
+	height: 100vh;
+	padding-top: 65px;
+	background-color: $accent;
+	.container {
+		height: 100%;
+	}
+	&__wrap {
+		@include flexbox();
+		align-items: flex-start;
+		height: 100%;
+		margin: 0px -7.5px;
+		& > * {
+			flex: 1 1 25%;
+			padding: 0px 7.5px;
+			margin-bottom: 15px;
+		}
+	}
+}

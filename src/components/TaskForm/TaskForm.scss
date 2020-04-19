@@ -1,0 +1,18 @@
+@import "../../scss/main.scss";
+.taskForm {
+	padding: 5px 15px;
+	&__form {
+		@include flexbox();
+		align-items: center;
+	}
+	&__input {
+		flex: 1;
+		font-size: 14px;
+		border: 1px solid darken($second, 5%);
+		line-height: 33px;
+		height: 33px;
+		border-radius: 15px;
+		padding: 0px 15px;
+		margin-right: 10px;
+	}
+}
