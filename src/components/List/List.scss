@@ -9,7 +9,13 @@
 		border-radius: 15px;
 		min-height: 400px;
 	}
-	&__tasks {
+	&__container {
 		flex: 1;
+	}
+	&__list {
+		padding: 15px 15px;
+		& > * {
+			margin-bottom: 10px;
+		}
 	}
 }

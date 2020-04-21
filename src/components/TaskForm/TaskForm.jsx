@@ -10,9 +10,8 @@ const TaskForm = ({ addTask }) => {
         className="taskForm__form"
         onSubmit={(event) => {
           event.preventDefault();
-          // addTask(value, category);
+          addTask(value, category);
           setValue('');
-          console.log(value);
         }}>
         <input
           type="text"
