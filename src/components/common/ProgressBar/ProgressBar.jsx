@@ -6,15 +6,14 @@ const CircularProgressBar = ({
   className,
   sqSize,
   strokeWidth,
-  allTasks = 0,
-  readyTasks = 0,
+  allTasks,
+  readyTasks,
 }) => {
-  const percentage = (readyTasks / allTasks) * 100;
+  const percentage = allTasks > 0 ? (readyTasks / allTasks) * 100 : 0;
   const radius = (sqSize - strokeWidth) / 2;
   const viewBox = `0 0 ${sqSize} ${sqSize}`;
   const dashArray = radius * Math.PI * 2;
   const dashOffset = dashArray - (dashArray * percentage) / 100;
-  console.log(percentage);
   return (
     <div className={cn('progressBar', { [className]: className })}>
       <svg

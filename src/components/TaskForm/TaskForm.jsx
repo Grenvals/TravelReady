@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './TaskForm.scss';
 import { Button } from '../common/Button/Button';
 
-const TaskForm = ({ addTask }) => {
+const TaskForm = ({ addTask, categoryName }) => {
   const [value, setValue] = useState('');
   return (
     <div className="taskForm">
@@ -10,7 +10,7 @@ const TaskForm = ({ addTask }) => {
         className="taskForm__form"
         onSubmit={(event) => {
           event.preventDefault();
-          addTask(value, category);
+          addTask(value, categoryName);
           setValue('');
         }}>
         <input

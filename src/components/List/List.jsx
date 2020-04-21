@@ -16,7 +16,6 @@ const List = ({ categoryName, tasksList, addTask, deleteTask, changeStatus }) =>
       deleteTask={deleteTask}
     />
   ));
-
   return (
     <div className="list">
       <div className="list__wrap">
@@ -28,7 +27,7 @@ const List = ({ categoryName, tasksList, addTask, deleteTask, changeStatus }) =>
         <div className="list__container">
           <ul className="list__list">{tasks}</ul>
         </div>
-        <TaskForm addTask={addTask} />
+        <TaskForm addTask={addTask} categoryName={categoryName} />
       </div>
     </div>
   );
