@@ -1,20 +1,23 @@
 @import "../../scss/main.scss";
 .board {
-	height: 100vh;
+	min-height: 100vh;
 	padding-top: 65px;
 	background-color: $accent;
+	overflow: auto;
 	.container {
 		height: 100%;
 	}
 	&__wrap {
 		@include flexbox();
 		align-items: flex-start;
-		height: 100%;
+		flex-wrap: wrap;
 		margin: 0px -7.5px;
+		margin-bottom: 65px;
 		& > * {
 			flex: 1 1 25%;
+			max-width: 37%;
 			padding: 0px 7.5px;
-			margin-bottom: 15px;
+			margin-bottom: 15px; 
 		}
 	}
 }

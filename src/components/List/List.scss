@@ -1,6 +1,5 @@
 @import "../../scss/main.scss";
 .list {
-	max-width: 400px;
 	&__wrap {
 		@include flexbox();
 		flex-direction: column;

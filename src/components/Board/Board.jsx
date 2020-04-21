@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Board.scss';
 import { List } from '../List/List';
+import { AddCategoryForm } from '../AddCategoryForm/AddCategoryForm';
 
 const Board = () => {
   const [tasksList, setTasksList] = useState([
@@ -84,7 +85,7 @@ const Board = () => {
     },
   ]);
 
-  const categoryList = [
+  const [categoryList, setCategoryList] = useState([
     {
       id: 1,
       name: 'Одяг',
@@ -101,7 +102,11 @@ const Board = () => {
       id: 4,
       name: 'Аптечка',
     },
-  ];
+    {
+      id: 5,
+      name: 'Харчування',
+    },
+  ]);
 
   const addTask = (text, category) => {
     const newId = `f${(+new Date()).toString(16)}`;
@@ -123,13 +128,29 @@ const Board = () => {
       }
       return t;
     });
-    console.log(newTasksList);
-    console.log(status);
     setTasksList(newTasksList);
   };
 
   const deleteTask = (id) => {
     const filterTasksList = tasksList.filter((t) => t.id !== id);
+    setTasksList(filterTasksList);
+  };
+
+  const addCategory = (name) => {
+    const newId = `f${(+new Date()).toString(16)}`;
+    const newCategory = {
+      id: newId,
+      name,
+    };
+    const newCategoryList = [...categoryList];
+    newCategoryList.push(newCategory);
+    setCategoryList(newCategoryList);
+  };
+  const deleteCategory = (id) => {
+    const category = categoryList.find((c) => c.id === id);
+    const filterTasksList = tasksList.filter((t) => t.category !== category.name);
+    const filterCategoryList = categoryList.filter((c) => c.id !== id);
+    setCategoryList(filterCategoryList);
     setTasksList(filterTasksList);
   };
 
@@ -139,6 +160,7 @@ const Board = () => {
       <List
         id={c.id}
         categoryName={c.name}
+        deleteCategory={deleteCategory}
         tasksList={filterTasksList}
         addTask={addTask}
         deleteTask={deleteTask}
@@ -149,7 +171,10 @@ const Board = () => {
   return (
     <div className="board">
       <div className="container">
-        <div className="board__wrap">{lists}</div>
+        <div className="board__wrap">
+          {lists}
+          <AddCategoryForm addCategory={addCategory} />
+        </div>
       </div>
     </div>
   );

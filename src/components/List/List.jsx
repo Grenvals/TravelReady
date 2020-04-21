@@ -4,7 +4,15 @@ import { ListHeader } from '../ListHeader/ListHeader';
 import { TaskForm } from '../TaskForm/TaskForm';
 import { Task } from '../Task/Task';
 
-const List = ({ categoryName, tasksList, addTask, deleteTask, changeStatus }) => {
+const List = ({
+  categoryName,
+  id,
+  deleteCategory,
+  tasksList,
+  addTask,
+  deleteTask,
+  changeStatus,
+}) => {
   const allTasks = tasksList.length;
   const readyTasks = tasksList.filter((t) => t.status === true).length;
   const tasks = tasksList.map((t) => (
@@ -23,11 +31,13 @@ const List = ({ categoryName, tasksList, addTask, deleteTask, changeStatus }) =>
           allTasks={allTasks}
           readyTasks={readyTasks}
           categoryName={categoryName}
+          categoryId={id}
+          deleteCategory={deleteCategory}
         />
         <div className="list__container">
           <ul className="list__list">{tasks}</ul>
         </div>
-        <TaskForm addTask={addTask} categoryName={categoryName} />
+        <TaskForm onSubmit={addTask} categoryName={categoryName} />
       </div>
     </div>
   );

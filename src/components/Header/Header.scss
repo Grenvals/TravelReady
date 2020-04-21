@@ -1,6 +1,7 @@
 @import "../../scss/main.scss";
 .header {
-	position: absolute;
+	position: fixed;
+	z-index: 999;
 	top: 0px;
 	left: 0px;
 	right: 0px;

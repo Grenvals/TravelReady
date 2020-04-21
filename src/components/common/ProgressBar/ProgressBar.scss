@@ -22,6 +22,7 @@
 		stroke-linecap: round;
 		stroke-linejoin: round;
 		fill: none;
+		transition: all 0.3s; 
 		&_complete {
 			stroke: $accent;
 		}

@@ -19,7 +19,11 @@ const Task = ({ id, status = false, text, changeStatus, deleteTask }) => {
       <button className="task__status" onClick={handleStatus}>
         <img src={status ? markIconComplete : markIcon} alt="#" />
       </button>
-      <div className={cn('task__text', { ['task__text_green']: status })}>{text}</div>
+      <h3
+        className={cn('task__text', { ['task__text_green']: status })}
+        onClick={handleStatus}>
+        {text}
+      </h3>
       <button className="task__delete" onClick={handleDelete}>
         <img src={deleteIcon} alt="#" />
       </button>

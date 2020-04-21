@@ -1,0 +1,16 @@
+@import "../../scss/main.scss";
+.addCategory {
+	position: fixed;
+	bottom: 5px;
+	right: 15px;
+	@include flexbox();
+	align-items: center;
+	&__button {
+		button {
+			background-color: darken($accent, 5%);
+			width: 47px;
+			height: 47px;
+			box-shadow: $shadow;
+		}
+	}
+}
