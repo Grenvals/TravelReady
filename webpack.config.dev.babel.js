@@ -16,11 +16,11 @@ module.exports = {
   output: {
     filename: '[name].js',
   },
-  devServer: {
-    historyApiFallback: true,
-    port: 3000,
-    hot: true,
-  },
+  // devServer: {
+  //   historyApiFallback: true,
+  //   port: 3000,
+  //   hot: true,
+  // },
   resolve: {
     extensions: ['.jsx', '.js', '*'],
     // modules: [path.resolve(__dirname, "src"), "node_modules"],
@@ -111,4 +111,9 @@ module.exports = {
       template: './public/index.html',
     }),
   ],
+  devServer: {
+    inline: true,
+    contentBase: './dist',
+    port: 5000,
+  },
 };
