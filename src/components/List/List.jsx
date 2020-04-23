@@ -22,6 +22,7 @@ const List = ({
   const readyTasks = tasksList.filter((t) => t.status === true).length;
   const tasks = tasksList.map((t) => (
     <Task
+      key={t.id}
       id={t.id}
       status={t.status}
       text={t.text}

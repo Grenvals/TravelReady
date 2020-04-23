@@ -20,6 +20,7 @@ const Board = () => {
   };
 
   const onDeleteCategory = (id) => {
+    const category = state.categoryList.find((c) => c.id === id);
     dispatch(deleteCategory(id));
   };
 
@@ -43,6 +44,7 @@ const Board = () => {
     const filterTasksList = state.tasksList.filter((t) => c.name === t.category);
     return (
       <List
+        key={c.id}
         id={c.id}
         categoryName={c.name}
         deleteCategory={onDeleteCategory}

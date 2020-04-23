@@ -44,9 +44,11 @@ const reducer = (state, action) => {
       };
     }
     case 'DELETE_CATEGORY': {
+      const categoryName = state.categoryList.find((c) => c.id === action.payload).name;
       return {
         ...state,
         categoryList: state.categoryList.filter((с) => с.id !== action.payload),
+        tasksList: state.tasksList.filter((t) => t.category !== categoryName),
       };
     }
     default:

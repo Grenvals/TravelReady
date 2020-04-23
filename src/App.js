@@ -10,17 +10,15 @@ import { initialState } from './store/initialState';
 import { Context } from './context';
 
 const App = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const initialStateSwitcher = JSON.parse(localStorage.getItem('state'))
+    ? JSON.parse(localStorage.getItem('state'))
+    : initialState;
 
-  // useEffect(() => {
-  //   if (localStorage.getItem('store')) {
-  //     const initialState = JSON.parse(localStorage.getItem('store'));
-  //     setCategoryList(localStore);
-  //   }
-  // }, []);
-  // const setLocalStorage = (newCategoryList) => {
-  //   localStorage.setItem('store', JSON.stringify(newCategoryList));
-  // };
+  const [state, dispatch] = useReducer(reducer, initialStateSwitcher);
+
+  useEffect(() => {
+    localStorage.setItem('state', JSON.stringify(state));
+  }, [state]);
 
   return (
     <Context.Provider
