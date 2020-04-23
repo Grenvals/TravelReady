@@ -5,9 +5,11 @@ import { Button } from '../common/Button/Button';
 
 const AddCategoryForm = ({ addCategory }) => {
   const [value, setValue] = useState(false);
+
   const handleClick = () => {
     value ? setValue(false) : setValue(true);
   };
+
   return (
     <div className="addCategory">
       {value && <TaskForm onSubmit={addCategory} />}

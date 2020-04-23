@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './List.scss';
 import { ListHeader } from '../ListHeader/ListHeader';
 import { TaskForm } from '../TaskForm/TaskForm';

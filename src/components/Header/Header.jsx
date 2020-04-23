@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import './Header.scss';
 import { Logo } from '../Logo/Logo';
 import { LineProgress } from '../common/LineProgress/LineProgress';
+import { Context } from '../../context';
 
-const Header = ({ allTasks, readyTasks }) => {
+const Header = () => {
+  const { state } = useContext(Context);
+
+  const allTasks = state.tasksList.length;
+  const readyTasks = state.tasksList.filter((t) => t.status === true).length;
+
   return (
     <header className="header">
       <div className="container">

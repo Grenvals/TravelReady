@@ -12,7 +12,6 @@ const Task = ({ id, status = false, text, changeStatus, deleteTask }) => {
 
   const handleDelete = () => {
     deleteTask(id);
-    console.log(id);
   };
   return (
     <li className="task">
