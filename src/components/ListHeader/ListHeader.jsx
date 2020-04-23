@@ -8,20 +8,23 @@ const ListHeader = ({
   allTasks,
   readyTasks,
   deleteCategory,
+  onDrop,
 }) => {
   const handleDelete = () => {
     deleteCategory(categoryId);
   };
   return (
     <div className="listHeader">
-      <h2 className="listHeader__title">{categoryName}</h2>
-      <CircularProgressBar
-        className="listHeader__progressBar"
-        strokeWidth="6"
-        sqSize="50"
-        allTasks={allTasks}
-        readyTasks={readyTasks}
-      />
+      <div className="listHeader__wrap" onClick={onDrop}>
+        <h2 className="listHeader__title">{categoryName}</h2>
+        <CircularProgressBar
+          className="listHeader__progressBar"
+          strokeWidth="6"
+          sqSize="50"
+          allTasks={allTasks}
+          readyTasks={readyTasks}
+        />
+      </div>
       <button className="listHeader__delete delete" onClick={handleDelete}></button>
     </div>
   );

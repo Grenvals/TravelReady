@@ -6,13 +6,15 @@
 		background-color: $second;
 		box-shadow: $shadow;
 		border-radius: 15px;
-		min-height: 400px;
+		height: 100%;
+		transition: heigth 0.7s;
 	}
 	&__container {
 		flex: 1;
 	}
 	&__list {
 		padding: 15px 15px;
+		min-height: 300px;
 		& > * {
 			margin-bottom: 10px;
 		}

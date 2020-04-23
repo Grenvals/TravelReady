@@ -1,0 +1,26 @@
+@import "../../../scss/main.scss";
+.lineProgress {
+	margin-right: 0;
+	margin-left: auto;
+	@include flexbox();
+	align-items: center;
+	&__wrap {
+		width: 250px;
+		background: darken($accent, 5%);
+		border-radius: 12px;
+		margin-right: 15px;
+	}
+	&__line {
+		height: 12px;
+		background: $second;
+		width: 50%;
+		border-radius: 12px;
+		transition: width 0.3s;
+	}
+	&__text {
+		color: $second;
+		font-size: 18px;
+		font-weight: 600;
+		min-width: 49px;
+	}
+}

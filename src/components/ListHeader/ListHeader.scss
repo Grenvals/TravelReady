@@ -1,10 +1,13 @@
 @import "../../scss/main.scss";
 .listHeader {
-	@include flexbox();
 	position: relative;
-	align-items: center;
 	padding: 5px 15px;
 	box-shadow: $shadow;
+	&__wrap {
+		@include flexbox();
+		cursor: pointer;
+		align-items: center;
+	}
 	&__title {
 		color: $textLight;
 		text-align: center;

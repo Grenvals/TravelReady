@@ -9,8 +9,10 @@ const TaskForm = ({ onSubmit, categoryName }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(inputValue, categoryName && categoryName);
-    setInputValue('');
+    if (inputValue.length > 0) {
+      onSubmit(inputValue, categoryName && categoryName);
+      setInputValue('');
+    }
   };
   return (
     <div className="taskForm">

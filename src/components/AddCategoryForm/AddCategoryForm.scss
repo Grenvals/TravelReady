@@ -1,6 +1,7 @@
 @import "../../scss/main.scss";
 .addCategory {
 	position: fixed;
+	z-index: 999;
 	bottom: 5px;
 	right: 15px;
 	@include flexbox();
