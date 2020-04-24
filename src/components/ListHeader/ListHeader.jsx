@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import './ListHeader.scss';
-import { CircularProgressBar } from '../common/ProgressBar/ProgressBar';
+import React from 'react';
+
 import cn from 'classnames';
+
+import { CircularProgressBar } from '../common/ProgressBar/ProgressBar';
+
+import './ListHeader.scss';
 
 const ListHeader = ({
   categoryName,

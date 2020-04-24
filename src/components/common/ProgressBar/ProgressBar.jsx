@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import './ProgressBar.scss';
+import React from 'react';
+
 import cn from 'classnames';
+
+import './ProgressBar.scss';
 
 const CircularProgressBar = ({
   className,

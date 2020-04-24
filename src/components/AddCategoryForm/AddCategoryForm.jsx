@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
-import './AddCategoryForm.scss';
-import { TaskForm } from '../TaskForm/TaskForm';
+
 import { Button } from '../common/Button/Button';
+import { TaskForm } from '../TaskForm/TaskForm';
+
+import './AddCategoryForm.scss';
 
 const AddCategoryForm = ({ addCategory }) => {
-  const [value, setValue] = useState(false);
+  const [isEditMode, setValue] = useState(false);
 
   const handleClick = () => {
-    value ? setValue(false) : setValue(true);
+    isEditMode ? setValue(false) : setValue(true);
   };
 
   return (
     <div className="addCategory">
-      {value && <TaskForm onSubmit={addCategory} />}
-      <Button className={'addCategory__button'} onClick={handleClick} />
+      {isEditMode && <TaskForm onSubmit={addCategory} />}
+      <Button
+        className={'addCategory__button'}
+        isActive={isEditMode ? false : true}
+        onClick={handleClick}
+      />
     </div>
   );
 };

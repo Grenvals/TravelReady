@@ -29,6 +29,14 @@ const reducer = (state, action) => {
         }),
       };
     }
+    case 'SET_TASK_NAME': {
+      return {
+        ...state,
+        tasksList: updateObjectInArray(state.tasksList, action.id, 'id', {
+          text: action.payload,
+        }),
+      };
+    }
     case 'SET_CATEGORY_DROPDOWN_STATUS': {
       return {
         ...state,

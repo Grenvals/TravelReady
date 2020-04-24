@@ -1,16 +1,19 @@
 import React, { useContext } from 'react';
-import './Board.scss';
-import { List } from '../List/List';
+
 import { AddCategoryForm } from '../AddCategoryForm/AddCategoryForm';
 import { Context } from '../../context';
+import { List } from '../List/List';
 import {
   setCategory,
   deleteCategory,
   setTask,
   deleteTask,
   setTaskStatus,
+  setTaskName,
   setCategoryDropdownStatus,
 } from '../../store/actions';
+
+import './Board.scss';
 
 const Board = () => {
   const { state, dispatch } = useContext(Context);
@@ -30,6 +33,10 @@ const Board = () => {
 
   const onDeleteTask = (id) => {
     dispatch(deleteTask(id));
+  };
+
+  const onChangeTaskName = (id, textValue) => {
+    dispatch(setTaskName(id, textValue));
   };
 
   const onChangeTaskStatus = (id, status) => {
@@ -54,6 +61,7 @@ const Board = () => {
         changeStatus={onChangeTaskStatus}
         isDropdown={c.isDropdown}
         changeCategoryDropdown={onChangeCategoryDropdown}
+        changeTaskName={onChangeTaskName}
       />
     );
   });

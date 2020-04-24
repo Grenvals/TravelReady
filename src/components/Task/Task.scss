@@ -1,7 +1,5 @@
 @import "../../scss/main.scss";
 .task {
-	// background-color: $second;
-	// box-shadow: $shadow;
 	min-height: 30px;
 	border-radius: 6px;
 	@include flexbox();

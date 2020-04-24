@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
-import './Header.scss';
+
+import { Context } from '../../context';
 import { Logo } from '../Logo/Logo';
 import { LineProgress } from '../common/LineProgress/LineProgress';
-import { Context } from '../../context';
+
+import './Header.scss';
 
 const Header = () => {
   const { state } = useContext(Context);

@@ -1,9 +1,12 @@
 import React from 'react';
-import './List.scss';
+
+import cn from 'classnames';
+
 import { ListHeader } from '../ListHeader/ListHeader';
 import { TaskForm } from '../TaskForm/TaskForm';
 import { Task } from '../Task/Task';
-import cn from 'classnames';
+
+import './List.scss';
 
 const List = ({
   categoryName,
@@ -15,6 +18,7 @@ const List = ({
   changeStatus,
   isDropdown,
   changeCategoryDropdown,
+  changeTaskName,
 }) => {
   const onDrop = () => {
     changeCategoryDropdown(id, isDropdown ? false : true);
@@ -29,6 +33,7 @@ const List = ({
       text={t.text}
       changeStatus={changeStatus}
       deleteTask={deleteTask}
+      changeTaskName={changeTaskName}
     />
   ));
   return (

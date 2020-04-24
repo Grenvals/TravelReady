@@ -1,6 +1,8 @@
 @import "../../scss/main.scss";
 .taskForm {
 	padding: 5px 15px;
+	flex: 1;
+	border-radius: 25px;
 	&__form {
 		@include flexbox();
 		align-items: center;

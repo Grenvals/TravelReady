@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
-import './TaskForm.scss';
+
 import { Button } from '../common/Button/Button';
 
-const TaskForm = ({ onSubmit, categoryName }) => {
-  const [inputValue, setInputValue] = useState('');
+import './TaskForm.scss';
+
+const TaskForm = ({ onSubmit, categoryName, initialValue, onBlur }) => {
+  const [inputValue, setInputValue] = useState(initialValue ? initialValue : '');
   const handleChange = (event) => {
     setInputValue(event.target.value);
+  };
+  const handleBlur = (e) => {
+    if (onBlur) {
+      handleSubmit(e);
+    }
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +28,7 @@ const TaskForm = ({ onSubmit, categoryName }) => {
           type="text"
           className="taskForm__input"
           onChange={handleChange}
+          onBlur={handleBlur}
           value={inputValue}
         />
         <Button />

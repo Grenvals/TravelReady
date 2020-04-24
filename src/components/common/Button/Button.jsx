@@ -1,6 +1,8 @@
 import React from 'react';
-import './Button.scss';
+
 import cn from 'classnames';
+
+import './Button.scss';
 
 const Button = ({ className, onClick }) => {
   const handleClick = () => {
