@@ -4,6 +4,7 @@ import webpack from 'webpack';
 import path from 'path';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 import autoprefixer from 'autoprefixer';
 
@@ -92,7 +93,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               outputPath: 'images',
-              name: '[name]-[sha1:hash:7].[ext]',
+              name: '[name].[ext]',
             },
           },
           'img-loader',
@@ -110,6 +111,9 @@ module.exports = {
       filename: './index.html',
       template: './public/index.html',
     }),
+    new CopyWebpackPlugin([
+      { from: './public', to: 'dist', ignore: ['./public/index.html'] },
+    ]),
   ],
   devServer: {
     inline: true,

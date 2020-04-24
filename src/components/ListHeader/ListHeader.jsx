@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './ListHeader.scss';
 import { CircularProgressBar } from '../common/ProgressBar/ProgressBar';
+import cn from 'classnames';
 
 const ListHeader = ({
   categoryName,
@@ -9,6 +10,7 @@ const ListHeader = ({
   readyTasks,
   deleteCategory,
   onDrop,
+  isDropdown,
 }) => {
   const handleDelete = () => {
     deleteCategory(categoryId);
@@ -16,6 +18,10 @@ const ListHeader = ({
   return (
     <div className="listHeader">
       <div className="listHeader__wrap" onClick={onDrop}>
+        <div
+          className={cn('listHeader__dropArrow', {
+            ['listHeader__dropArrow_active']: isDropdown,
+          })}></div>
         <h2 className="listHeader__title">{categoryName}</h2>
         <CircularProgressBar
           className="listHeader__progressBar"

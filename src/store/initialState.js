@@ -97,13 +97,13 @@ export const initialState = {
       text: 'Сублімати',
     },
     {
-      id: 't16',
+      id: 't17',
       status: true,
       category: 'Інше',
       text: 'Сірники',
     },
     {
-      id: 't17',
+      id: 't18',
       status: false,
       category: 'Інше',
       text: 'Запальничка',

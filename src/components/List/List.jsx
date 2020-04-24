@@ -3,6 +3,7 @@ import './List.scss';
 import { ListHeader } from '../ListHeader/ListHeader';
 import { TaskForm } from '../TaskForm/TaskForm';
 import { Task } from '../Task/Task';
+import cn from 'classnames';
 
 const List = ({
   categoryName,
@@ -39,14 +40,18 @@ const List = ({
           categoryName={categoryName}
           categoryId={id}
           deleteCategory={deleteCategory}
+          isDropdown={isDropdown}
           onDrop={onDrop}
         />
-        {isDropdown && (
+        <div
+          className={cn('list__body', {
+            ['list__body_active']: isDropdown,
+          })}>
           <div className="list__container">
             <ul className="list__list">{tasks}</ul>
           </div>
-        )}
-        {isDropdown && <TaskForm onSubmit={addTask} categoryName={categoryName} />}
+          <TaskForm onSubmit={addTask} categoryName={categoryName} />
+        </div>
       </div>
     </div>
   );

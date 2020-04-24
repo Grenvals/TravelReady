@@ -19,4 +19,13 @@
 			margin-bottom: 10px;
 		}
 	}
+	&__body {
+		max-height: 0px;
+		overflow: hidden;
+		transition: max-height 0.2s ease;
+		transform: translate3d(0, 0, 0);
+		&_active {
+			max-height: 700px;
+		}
+	}
 }

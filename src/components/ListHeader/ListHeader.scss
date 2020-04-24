@@ -48,4 +48,39 @@
 			transform: translateX(-50%) translateY(-50%) rotate(-45deg);
 		}
 	}
+	&__dropArrow {
+		position: relative;
+		height: 20px;
+		width: 20px;
+		margin-right: 10px;
+		&:before, &:after {
+			content: '';
+			display: block;
+			position: absolute;
+			border-radius: 7px;
+			top: 42%;
+			height: 15%;
+			width: 55%;
+			background: $textLight;
+			transition: transform 0.2s;
+		}
+		&:before {
+			left: 7%;
+			transform: rotate(50deg);
+		}
+		&:after {
+			right: 7%;
+			transform: rotate(-50deg);
+		}
+		&_active {
+			&:before {
+				left: 7%;
+				transform: rotate(-50deg);
+			}
+			&:after {
+				right: 7%;
+				transform: rotate(50deg);
+			}
+		}
+	}
 }

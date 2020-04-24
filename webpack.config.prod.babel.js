@@ -4,6 +4,7 @@ import webpack from 'webpack';
 
 import autoprefixer from 'autoprefixer';
 import path from 'path';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageMinPlugin from 'imagemin-webpack-plugin';
@@ -92,7 +93,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               outputPath: 'images',
-              name: '[name]-[sha1:hash:7].[ext]',
+              name: '[name].[ext]',
             },
           },
           'img-loader',
@@ -123,11 +124,7 @@ module.exports = {
       new ImageMinPlugin({
         test: /\.(png|jpe?g|gif|svg)$/,
       }),
+      new CopyWebpackPlugin([{ from: './public', to: './', ignore: ['index.html'] }]),
     ],
-  },
-  devServer: {
-    inline: true,
-    contentBase: './dist',
-    port: 5000,
   },
 };
