@@ -5,8 +5,8 @@
 	@include flexbox();
 	align-items: center;
 	&__status {
+		flex: 0 0 auto;
 		width: 22px;
-		margin-right: 15px;
 		border: none;
 		background: transparent;
 		img {
@@ -16,15 +16,21 @@
 	&__text {
 		cursor: pointer;
 		flex: 1;
+		margin-left: 15px;
 		font-size: 15px;
 		color: $textLight;
 		font-weight: 600;
 		margin-right: 15px;
+		max-width: 200px;
+		white-space: pre-line;
+		word-wrap: break-word;
 		&_green {
 			color: $accent;
 		}
 	}
 	&__delete {
+		margin-left: auto;
+		margin-right: 0px;
 		width: 14px;
 		border: none;
 		background: transparent;

@@ -42,9 +42,11 @@ const Task = ({ id, status = false, text, changeStatus, deleteTask, changeTaskNa
         </h3>
       )}
       {isEditMode && <TaskForm onSubmit={handleSubmit} initialValue={text} onBlur />}
-      <button className="task__delete" onClick={handleDelete}>
-        <img src={deleteIcon} alt="#" />
-      </button>
+      {!isEditMode && (
+        <button className="task__delete" onClick={handleDelete}>
+          <img src={deleteIcon} alt="#" />
+        </button>
+      )}
     </li>
   );
 };

@@ -1,7 +1,7 @@
 @import "../../scss/main.scss";
 .taskForm {
-	padding: 5px 15px;
 	flex: 1;
+	padding: 5px 15px;
 	border-radius: 25px;
 	&__form {
 		@include flexbox();
@@ -16,5 +16,8 @@
 		border-radius: 15px;
 		padding: 0px 15px;
 		margin-right: 10px;
+		@media (max-width: $md4+px) {
+			min-width: 170px;
+		}
 	}
 }
