@@ -1,4 +1,4 @@
-const staticCacheName = 'static-cache-v1.0.1';
+const staticCacheName = 'static-cache-v1.0.3';
 
 const staticAssets = [
   './',
@@ -12,7 +12,6 @@ const staticAssets = [
 self.addEventListener('install', async (event) => {
   const cache = await caches.open(staticCacheName);
   await cache.addAll(staticAssets);
-  console.log('Service worker has been installed');
 });
 
 self.addEventListener('activate', async (event) => {
@@ -23,11 +22,9 @@ self.addEventListener('activate', async (event) => {
     }
   });
   await Promise.all(checkKeys);
-  console.log('Service worker has been activated');
 });
 
 self.addEventListener('fetch', (event) => {
-  console.log(`Trying to fetch ${event.request.url}`);
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       return cachedResponse || fetch(event.request);

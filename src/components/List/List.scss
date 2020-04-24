@@ -6,8 +6,6 @@
 		background-color: $second;
 		box-shadow: $shadow;
 		border-radius: 18px;
-		height: 100%;
-		transition: heigth 0.7s;
 	}
 	&__container {
 		flex: 1;
@@ -22,10 +20,12 @@
 	&__body {
 		max-height: 0px;
 		overflow: hidden;
-		transition: max-height 0.2s ease;
+		transition: opacity 0.2s ease;
+		opacity: 0;
 		transform: translate3d(0, 0, 0);
 		&_active {
-			max-height: 700px;
+			max-height: 1000px;
+			opacity: 1;
 		}
 	}
 }

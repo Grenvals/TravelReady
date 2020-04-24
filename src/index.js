@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,12 +14,10 @@ window.addEventListener('load', () => {
     navigator.serviceWorker
       .register('./service-worker.js')
       .then((registration) => {
-        console.log('Service worker successfully registered', registration);
+        // console.log('Service worker successfully registered', registration);
       })
       .catch((error) => {
-        console.log('Service worker registration failed', error);
+        // console.log('Service worker registration failed', error);
       });
   }
 });
-
-// serviceWorker.unregister();
