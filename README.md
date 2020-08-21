@@ -14,9 +14,9 @@ Travel Ready makes packing easy for you to figure out what items you shouldn’t
    [Посилання на сайт](https://grenvals.github.io/TravelReady/index.html)
    ![Install](https://user-images.githubusercontent.com/40334272/90870949-ff8f2600-e3a2-11ea-9d66-4cfd3ed77224.png)
    ###  Встановити на компютер 
-      1.  [Відкрити додаток](https://grenvals.github.io/TravelReady/index.html)
-      2. В полі адреси сайту з'явиться надпис встановити або іконка "+".
-      3. Після інсталяції додаток з'явиться на робочому столі.
+   1.  [Відкрити додаток](https://grenvals.github.io/TravelReady/index.html)
+   2. В полі адреси сайту з'явиться надпис встановити або іконка "+".
+   3. Після інсталяції додаток з'явиться на робочому столі.
    ![laptop](https://user-images.githubusercontent.com/40334272/90871374-ac69a300-e3a3-11ea-97ed-9673716a3a7d.png)
    ![phone](https://user-images.githubusercontent.com/40334272/90870654-8f80a000-e3a2-11ea-92d6-b337657f29df.png)
 
