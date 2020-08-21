@@ -1,4 +1,4 @@
-# Travel Ready 
+# [Travel Ready ](https://grenvals.github.io/TravelReady/index.html)
 Travel Ready makes packing easy for you to figure out what items you shouldn’t forget to pack into your backpack or suitcase for your weekend, travel, or trip. App available on browser, mobile devices(IOS/Android), and desktop.
 
    ![general](https://user-images.githubusercontent.com/40334272/90871711-2bf77200-e3a4-11ea-85f5-158ee7639aa3.png)
@@ -11,9 +11,10 @@ Travel Ready makes packing easy for you to figure out what items you shouldn’t
 ## 🌎 How to install 
    Додаток кросплатформний, ви можете встановити його на смартфон, комп’ютер, або користуватись у браузері. Особисто я часто використовую його на смартфоні). Додаток не потребує доступу до мережі інтернет, всі зміни зберігаються локально. 
    ###  Встановити на смартфон 
+   [Посилання на сайт](https://grenvals.github.io/TravelReady/index.html)
    ![Install](https://user-images.githubusercontent.com/40334272/90870949-ff8f2600-e3a2-11ea-9d66-4cfd3ed77224.png)
    ###  Встановити на компютер 
-      1. Відкрити додаток
+      1.  [Відкрити додаток](https://grenvals.github.io/TravelReady/index.html)
       2. В полі адреси сайту з'явиться надпис встановити або іконка "+".
       3. Після інсталяції додаток з'явиться на робочому столі.
    ![laptop](https://user-images.githubusercontent.com/40334272/90871374-ac69a300-e3a3-11ea-97ed-9673716a3a7d.png)
